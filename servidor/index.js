@@ -3,7 +3,15 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send("Servidor")
+})
+
+app.get('/status', (req, res) => {
+  if (Boolean(Math.round(Math.random()))) {
+    res.status(200).send("Server is working")
+  } else {
+    res.status(500).send("Server have a error")
+  }
 })
 
 app.listen(port, () => {
