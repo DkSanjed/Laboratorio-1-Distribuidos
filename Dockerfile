@@ -16,6 +16,7 @@ RUN git clone https://github.com/DkSanjed/Laboratorio-1-Distribuidos.git
 
 WORKDIR /home/server/Laboratorio-1-Distribuidos/servidor
 RUN npm install
+RUN npm install pm2 -g
 
 EXPOSE 3000
-CMD ["node", "index.js"]
+CMD ["pm2", "start", "index.js"]

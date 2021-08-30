@@ -10,7 +10,7 @@ app.get('/status', (req, res) => {
   if (Boolean(Math.round(Math.random() < 0.7))) {
     res.status(200).send("Server is working")
   } else {
-    res.status(500).send("Server have a error")
+    res.status(500).send("Server have an error")
   }
 })
 
