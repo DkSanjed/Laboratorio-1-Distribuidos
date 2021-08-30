@@ -8,9 +8,9 @@ app.get('/', (req, res) => {
 
 app.get('/status', (req, res) => {
   if (Boolean(Math.round(Math.random() < 0.7))) {
-    res.status(200).send("Server is working")
+    res.sendStatus(200)
   } else {
-    res.status(500).send("Server have an error")
+    res.sendStatus(500)
   }
 })
 
