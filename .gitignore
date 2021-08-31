@@ -1,2 +1,3 @@
 /servidor/node_modules
 /middleware/.vagrant
+/middleware/node_modules
