@@ -1,9 +1,11 @@
 const express = require('express')
 const app = express()
 const port = 7000
+const path = require('path');
+
 
 app.get('/', (req, res) => {
-  res.sendFile('vista.html', { root: __dirname })
+  res.sendFile(path.join(__dirname, 'view/vista.html'))
 })
 
 app.listen(port, () => {
