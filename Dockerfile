@@ -9,6 +9,8 @@ RUN apt update -y
 RUN apt install git -y
 RUN apt install nodejs -y
 RUN apt install npm -y
+RUN apt-get install openssh-server -y
+RUN service ssh start
 
 RUN mkdir server
 WORKDIR /home/server
